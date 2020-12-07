@@ -14,11 +14,15 @@ const { AxePuppeteer } = require('@axe-core/puppeteer');
 		const results = await new AxePuppeteer(page).options({
 			rules: { 'color-contrast': { enabled: false } }
 		}).analyze();
-		if (results.violations) {
-			console.log(results);
+		if (results.violations && results.violations.length > 0) {
+			console.log('Violations: ', results.violations);
+			console.log(`Total issues found: ${results.violations.length}`);
 		} else {
 			console.log('No accessibility issues found, good job!');
 		}
+		// console.log('Inapplicable tests: ', results.inapplicable);
+		// console.log('Incomplete tests: ', results.incomplete);
+		console.log(`Passed a11y tests: ${results.passes.length}`);
 	} catch (e) {
 		throw new Error(e);
 	} finally {
