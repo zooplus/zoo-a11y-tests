@@ -1,0 +1,23 @@
+{
+	"name": "zoo-a11y-tests",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/zooplus/zoo-a11y-tests.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/zooplus/zoo-a11y-tests/issues"
+	},
+	"homepage": "https://github.com/zooplus/zoo-a11y-tests#readme",
+	"devDependencies": {
+		"@axe-core/puppeteer": "^4.1.0",
+		"puppeteer": "^5.5.0"
+	}
+}
